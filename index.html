@@ -1197,13 +1197,20 @@ async function submitContactForm(e) {
     const data = new FormData(form);
 
     try {
-        const res = await fetch('https://formsubmit.co/ajax/jorgelameiras208@gmail.com', {
+        const payload = {
+            name: form.querySelector('[name=name]').value,
+            email: form.querySelector('[name=email]').value,
+            phone: form.querySelector('[name=phone]').value,
+            units: form.querySelector('[name=units]').value,
+            message: form.querySelector('[name=message]').value,
+        };
+        const res = await fetch('/api/contact', {
             method: 'POST',
-            headers: { 'Accept': 'application/json' },
-            body: data
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify(payload)
         });
         const result = await res.json();
-        if (result.success === 'true' || result.success === true) {
+        if (result.success) {
             form.reset();
             document.querySelector('.success-overlay').classList.add('active');
         } else {
