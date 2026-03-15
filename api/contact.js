@@ -1,5 +1,5 @@
 // Allowed origins for CORS
-const ALLOWED_ORIGINS = ['https://casafresh.com', 'https://www.casafresh.com'];
+const ALLOWED_ORIGINS = ['https://casafresh.com', 'https://www.casafresh.com', 'https://casafresh.vercel.app', 'https://dayoffac.com', 'https://www.dayoffac.com'];
 
 // In-memory rate limiter (per Vercel serverless instance)
 const rateLimit = new Map();
