@@ -118,7 +118,7 @@
             --duration-slow: 500ms;
             --duration-slower: 800ms;
             --max-width: 1280px;
-            --nav-height: 80px;
+            --nav-height: 100px;
         }
 
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
@@ -211,7 +211,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 0 clamp(var(--space-4), 4vw, var(--space-8));
+            padding: 0 clamp(var(--space-6), 5vw, var(--space-12));
             transition: all var(--duration-normal) var(--ease-out);
         }
         .nav.scrolled {
@@ -358,7 +358,7 @@
            HERO SECTION
            ============================================ */
         .hero {
-            min-height: 85vh;
+            min-height: 70vh;
             background: var(--color-primary-900);
             position: relative;
             display: flex;
@@ -389,7 +389,7 @@
             width: 100%;
             max-width: var(--max-width);
             margin: 0 auto;
-            padding: calc(var(--nav-height) + var(--space-16)) clamp(var(--space-4), 4vw, var(--space-8)) var(--space-16);
+            padding: calc(var(--nav-height) + var(--space-8)) clamp(var(--space-4), 4vw, var(--space-8)) var(--space-8);
             display: grid;
             grid-template-columns: 1fr 1fr;
             gap: var(--space-12);
@@ -548,10 +548,10 @@
            ============================================ */
         .marquee-section {
             padding: var(--space-5) 0;
-            background: var(--color-primary-800);
+            background: var(--color-primary-900);
             overflow: hidden;
-            border-top: 1px solid rgba(255,255,255,0.04);
-            border-bottom: 1px solid rgba(255,255,255,0.04);
+            border-top: 1px solid rgba(58,176,232,0.08);
+            border-bottom: 1px solid rgba(58,176,232,0.08);
         }
         .marquee-track {
             display: flex;
@@ -562,7 +562,7 @@
         .marquee-item {
             font-family: var(--font-display);
             font-size: clamp(1.25rem, 2.5vw, 2rem);
-            color: var(--color-primary-500);
+            color: var(--color-primary-200);
             white-space: nowrap;
             padding: 0 var(--space-8);
         }
@@ -1891,7 +1891,7 @@
     <!-- Navigation -->
     <nav class="nav" id="nav">
         <a href="#hero" class="nav-logo">
-            <img src="dayoff-logo.png" alt="DayOff Air Conditioning &amp; Heating Solutions" style="height:60px;object-fit:contain;background:transparent;mix-blend-mode:multiply;">
+            <img src="dayoff-logo.png" alt="DayOff Air Conditioning &amp; Heating Solutions" style="height:80px;object-fit:contain;background:transparent;mix-blend-mode:multiply;">
         </a>
 
         <ul class="nav-links" id="navLinks">
