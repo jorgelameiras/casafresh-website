@@ -1,6 +1,14 @@
 // Allowed origins for CORS
 const ALLOWED_ORIGINS = ['https://casafresh.com', 'https://www.casafresh.com', 'https://casafresh.vercel.app', 'https://dayoffac.com', 'https://www.dayoffac.com'];
 
+function isAllowedOrigin(origin) {
+  if (!origin) return true; // allow server-side / direct
+  if (ALLOWED_ORIGINS.includes(origin)) return true;
+  // Allow all casafresh-website vercel preview deployments
+  if (/^https:\/\/casafresh-website[a-z0-9-]*\.vercel\.app$/.test(origin)) return true;
+  return false;
+}
+
 // In-memory rate limiter (per Vercel serverless instance)
 const rateLimit = new Map();
 const RATE_LIMIT_WINDOW = 60 * 1000; // 1 minute
@@ -35,7 +43,7 @@ function isValidEmail(email) {
 export default async function handler(req, res) {
   // CORS origin check
   const origin = req.headers['origin'];
-  if (origin && ALLOWED_ORIGINS.includes(origin)) {
+  if (isAllowedOrigin(origin)) {
     res.setHeader('Access-Control-Allow-Origin', origin);
   }
   res.setHeader('Access-Control-Allow-Methods', 'POST');
@@ -45,7 +53,7 @@ export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ error: 'Method not allowed' });
 
   // Reject requests from unknown origins in production
-  if (origin && !ALLOWED_ORIGINS.includes(origin)) {
+  if (origin && !isAllowedOrigin(origin)) {
     return res.status(403).json({ error: 'Forbidden' });
   }
 
