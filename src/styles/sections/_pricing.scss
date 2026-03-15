@@ -1,0 +1,133 @@
+// ============================================
+// PRICING
+// ============================================
+
+/* ============================================
+           PRICING
+           ============================================ */
+        .pricing { background: var(--color-white); }
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-6);
+            align-items: start;
+        }
+        .pricing-card {
+            background: var(--color-white);
+            border-radius: var(--radius-xl);
+            padding: var(--space-8);
+            border: 1.5px solid var(--color-neutral-200);
+            transition: all var(--duration-normal) var(--ease-out);
+            position: relative;
+        }
+        .pricing-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+        .pricing-card.featured {
+            background: var(--color-primary-900);
+            color: var(--color-white);
+            border-color: var(--color-primary-700);
+            transform: scale(1.04);
+            box-shadow: var(--shadow-xl);
+        }
+        .pricing-card.featured:hover { transform: scale(1.04) translateY(-4px); box-shadow: 0 24px 64px rgba(0,0,0,0.2); }
+        .pricing-badge {
+            display: inline-block;
+            background: rgba(58,176,232,0.15);
+            color: var(--color-accent-400);
+            font-family: var(--font-mono);
+            font-size: var(--text-overline);
+            letter-spacing: var(--tracking-wider);
+            text-transform: uppercase;
+            padding: var(--space-1) var(--space-3);
+            border-radius: var(--radius-full);
+            margin-bottom: var(--space-4);
+            border: 1px solid rgba(58,176,232,0.25);
+        }
+        .pricing-plan {
+            font-family: var(--font-mono);
+            font-size: var(--text-overline);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wider);
+            color: var(--color-neutral-500);
+            font-weight: 500;
+            margin-bottom: var(--space-1);
+        }
+        .pricing-card.featured .pricing-plan { color: var(--color-primary-300); }
+        .pricing-name {
+            font-family: var(--font-display);
+            font-size: var(--text-h3);
+            color: var(--color-primary-900);
+            margin-bottom: var(--space-4);
+        }
+        .pricing-card.featured .pricing-name { color: var(--color-white); }
+        .pricing-amount {
+            font-family: var(--font-display);
+            font-size: var(--text-display-2);
+            line-height: 1;
+            color: var(--color-primary-900);
+            margin-bottom: var(--space-1);
+        }
+        .pricing-card.featured .pricing-amount { color: var(--color-accent-400); }
+        .pricing-period {
+            font-family: var(--font-mono);
+            font-size: var(--text-caption);
+            color: var(--color-neutral-500);
+            margin-bottom: var(--space-6);
+        }
+        .pricing-card.featured .pricing-period { color: var(--color-primary-400); }
+        .pricing-divider {
+            height: 1px;
+            background: var(--color-neutral-100);
+            margin-bottom: var(--space-6);
+        }
+        .pricing-card.featured .pricing-divider { background: rgba(255,255,255,0.08); }
+        .pricing-features {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            margin-bottom: var(--space-8);
+        }
+        .pricing-feature {
+            display: flex;
+            align-items: flex-start;
+            gap: var(--space-2);
+            font-size: var(--text-body-sm);
+            color: var(--color-neutral-600);
+            line-height: var(--leading-snug);
+        }
+        .pricing-card.featured .pricing-feature { color: var(--color-primary-200); }
+        .pricing-check {
+            width: 18px; height: 18px;
+            background: var(--color-accent-50);
+            color: var(--color-accent-600);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 9px;
+            font-weight: 700;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        .pricing-card.featured .pricing-check { background: rgba(58,176,232,0.2); color: var(--color-accent-400); }
+        .btn-pricing-default {
+            display: block;
+            width: 100%;
+            text-align: center;
+            padding: var(--space-4) var(--space-6);
+            border-radius: var(--radius-full);
+            border: 1.5px solid var(--color-neutral-200);
+            color: var(--color-neutral-700);
+            font-weight: 600;
+            font-size: var(--text-body-sm);
+            transition: all var(--duration-normal) var(--ease-out);
+            cursor: pointer;
+            background: transparent;
+            font-family: var(--font-body);
+        }
+        .btn-pricing-default:hover {
+            border-color: var(--color-primary-400);
+            color: var(--color-primary-700);
+            background: var(--color-primary-50);
+            transform: translateY(-1px);
+        }
+

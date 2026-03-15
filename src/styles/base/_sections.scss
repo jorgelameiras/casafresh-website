@@ -1,0 +1,59 @@
+// ============================================
+// SECTION COMMON
+// ============================================
+
+/* ============================================
+           SECTION COMMON
+           ============================================ */
+        .section {
+            padding: var(--space-32) clamp(var(--space-4), 4vw, var(--space-8));
+            position: relative;
+        }
+        .section-inner { max-width: var(--max-width); margin: 0 auto; }
+        .section-header {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto var(--space-16);
+        }
+        .section-overline {
+            font-family: var(--font-mono);
+            font-size: var(--text-overline);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wider);
+            color: var(--color-accent-600);
+            font-weight: 500;
+            margin-bottom: var(--space-4);
+        }
+        .section-title {
+            font-family: var(--font-display);
+            font-size: var(--text-display-2);
+            line-height: var(--leading-tight);
+            letter-spacing: var(--tracking-tight);
+            margin-bottom: var(--space-4);
+        }
+        .section-subtitle {
+            font-size: var(--text-body-lg);
+            color: var(--color-neutral-600);
+            line-height: var(--leading-relaxed);
+        }
+
+        /* Reveal animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(36px);
+            transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+        }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-left {
+            opacity: 0;
+            transform: translateX(-36px);
+            transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+        }
+        .reveal-left.visible { opacity: 1; transform: translateX(0); }
+        .reveal-right {
+            opacity: 0;
+            transform: translateX(36px);
+            transition: opacity 0.75s var(--ease-out), transform 0.75s var(--ease-out);
+        }
+        .reveal-right.visible { opacity: 1; transform: translateX(0); }
+

@@ -1,0 +1,63 @@
+// ============================================
+// LOADING SCREEN
+// ============================================
+
+/* ============================================
+           LOADING SCREEN
+           ============================================ */
+        .loader {
+            position: fixed;
+            inset: 0;
+            background: var(--color-primary-900);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: var(--space-6);
+            transition: opacity 0.7s var(--ease-out), visibility 0.7s ease;
+        }
+        .loader.hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+        .loader-logo-wrap {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-3);
+        }
+        .loader-icon {
+            font-size: 3rem;
+            animation: loaderBounce 1.5s ease-in-out infinite;
+        }
+        @keyframes loaderBounce {
+            0%, 100% { transform: translateY(0) scale(1); }
+            50% { transform: translateY(-8px) scale(1.05); }
+        }
+        .loader-logo {
+            font-family: var(--font-display);
+            font-size: var(--text-h1);
+            color: var(--color-white);
+            letter-spacing: -0.01em;
+        }
+        .loader-logo span { color: var(--color-accent-400); }
+        .loader-tagline {
+            font-family: var(--font-mono);
+            font-size: var(--text-overline);
+            color: var(--color-primary-300);
+            text-transform: uppercase;
+            letter-spacing: var(--tracking-wider);
+        }
+        .loader-bar {
+            width: 220px;
+            height: 3px;
+            background: var(--color-primary-700);
+            border-radius: var(--radius-full);
+            overflow: hidden;
+        }
+        .loader-bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--color-accent-600), var(--color-accent-500), var(--color-accent-400));
+            border-radius: var(--radius-full);
+            animation: loadBar 1.6s var(--ease-out) forwards;
+        }
+        @keyframes loadBar { from { width: 0; } to { width: 100%; } }
+

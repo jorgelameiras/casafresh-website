@@ -1,0 +1,44 @@
+// ============================================
+// TRUST BADGE BAR
+// ============================================
+
+/* ============================================
+           TRUST BADGE BAR
+           ============================================ */
+        .trust-bar {
+            background: #EBF6FD;
+            border-top: 1px solid #D8F1FD;
+            border-bottom: 1px solid #D8F1FD;
+            padding: var(--space-4) clamp(var(--space-4), 4vw, var(--space-8));
+        }
+        .trust-bar-inner {
+            max-width: var(--max-width);
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: var(--space-2);
+        }
+        .trust-badge {
+            display: flex;
+            align-items: center;
+            gap: var(--space-2);
+            padding: var(--space-2) var(--space-4);
+            font-size: var(--text-body-sm);
+            font-weight: 500;
+            color: var(--color-primary-700);
+            white-space: nowrap;
+        }
+        .trust-badge span { font-size: var(--text-body-sm); }
+        .trust-divider {
+            width: 1px; height: 20px;
+            background: var(--color-primary-200);
+            flex-shrink: 0;
+        }
+        @media (max-width: 640px) {
+            .trust-divider { display: none; }
+            .trust-badge { font-size: var(--text-caption); padding: var(--space-1) var(--space-2); }
+            .trust-bar-inner { gap: var(--space-1); }
+        }
+
