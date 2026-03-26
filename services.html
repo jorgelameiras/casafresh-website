@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Services & Pricing | DayOff AC & Heating Solutions</title>
+  <meta name="description" content="Professional HVAC services and transparent pricing for vacation rental owners in Central Florida. Filter replacement, drain cleaning, coil maintenance, and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Services & Pricing | DayOff AC & Heating Solutions">
+  <meta property="og:description" content="Professional HVAC services with transparent pricing for Central Florida vacation rentals.">
+  <meta name="theme-color" content="#0A1628">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #0A1628;
+      --navy-accent: #1E3A5F;
+      --white: #FFFFFF;
+      --gray-light: #F8F9FA;
+      --orange: #E8852A;
+      --text-dark: #1A1A2A;
+      --text-light: #6B7280;
+      --border: #E5E7EB;
+      --shadow: 0 2px 16px rgba(10,22,40,0.08);
+      --shadow-md: 0 4px 32px rgba(10,22,40,0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      font-weight: 400;
+      color: var(--text-dark);
+      background: var(--white);
+      line-height: 1.6;
+    }
+
+    /* ─── HERO ─── */
+    .hero {
+      margin-top: 72px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-accent) 100%);
+      color: var(--white);
+      padding: 80px 24px 60px;
+      text-align: center;
+    }
+
+    .hero-inner {
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    .hero-sub {
+      font-size: 18px;
+      opacity: 0.9;
+      line-height: 1.6;
+    }
+
+    /* ─── SERVICES SECTION ─── */
+    .services {
+      max-width: 1100px;
+      margin: 80px auto;
+      padding: 0 24px;
+    }
+
+    .service-category {
+      margin-bottom: 60px;
+    }
+
+    .category-header {
+      margin-bottom: 24px;
+      padding-bottom: 12px;
+      border-bottom: 2px solid var(--orange);
+    }
+
+    .category-title {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .category-desc {
+      color: var(--text-light);
+      font-size: 16px;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 1px;
+      background: var(--border);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .service-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 24px;
+      background: var(--white);
+      transition: background 0.2s;
+    }
+
+    .service-item:hover {
+      background: var(--gray-light);
+    }
+
+    .service-name {
+      font-weight: 500;
+      color: var(--text-dark);
+      font-size: 16px;
+    }
+
+    .service-price {
+      font-weight: 600;
+      color: var(--navy);
+      font-size: 18px;
+    }
+
+    /* ─── CTA ─── */
+    .cta {
+      background: var(--gray-light);
+      padding: 60px 24px;
+      text-align: center;
+    }
+
+    .cta-inner {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .cta h2 {
+      font-size: clamp(2rem, 4vw, 2.5rem);
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .cta p {
+      font-size: 18px;
+      color: var(--text-light);
+      margin-bottom: 32px;
+    }
+
+    .btn-large {
+      background: var(--orange);
+      color: var(--white);
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 18px;
+      text-decoration: none;
+      display: inline-block;
+      transition: all 0.2s;
+    }
+
+    .btn-large:hover {
+      background: #D77624;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(232,133,42,0.3);
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: var(--navy);
+      color: var(--white);
+      padding: 40px 24px;
+      text-align: center;
+    }
+
+    footer p {
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    /* ─── RESPONSIVE ─── */
+    @media (max-width: 768px) {
+      .service-item {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+      }
+      .service-price {
+        align-self: flex-end;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION (loaded from header.html) -->
+  <div id="header-placeholder"></div>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-inner">
+      <h1>Services & Pricing</h1>
+      <p class="hero-sub">Transparent pricing for all your HVAC needs. No hidden fees, no surprises — just honest service for your vacation rental property.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+
+    <!-- MAJOR SERVICES -->
+    <div class="service-category">
+      <div class="category-header">
+        <h2 class="category-title">Major Services</h2>
+        <p class="category-desc">Essential HVAC repairs and maintenance to keep your system running smoothly.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item">
+          <span class="service-name">Filter Replacement</span>
+          <span class="service-price">$50.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Service Call</span>
+          <span class="service-price">$135.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Drain Line Full Cleaning</span>
+          <span class="service-price">$180.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Drain Line PVC Repipe</span>
+          <span class="service-price">$210.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Capacitor Replacement + Labor</span>
+          <span class="service-price">$250.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Contactor Replacement + Labor</span>
+          <span class="service-price">$250.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Pressure Switch Replacement + Labor</span>
+          <span class="service-price">$350.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Schrader Core Replacement + Labor</span>
+          <span class="service-price">$175.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">410A Refrigerant (per pound)</span>
+          <span class="service-price">$120.00</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- INDOOR AIR QUALITY -->
+    <div class="service-category">
+      <div class="category-header">
+        <h2 class="category-title">Indoor Air Quality</h2>
+        <p class="category-desc">Keep your vacation rental's air clean and fresh for your guests.</p>
+      </div>
+      <div class="service-list">
+        <div class="service-item">
+          <span class="service-name">Blower Assembly Pull and Cleaning</span>
+          <span class="service-price">$340.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Evap Coil Clean</span>
+          <span class="service-price">$150.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Evap Coil Plan - Treatment</span>
+          <span class="service-price">$80.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">UV Light Installation</span>
+          <span class="service-price">$385.00</span>
+        </div>
+        <div class="service-item">
+          <span class="service-name">Condenser Coil Cleaning</span>
+          <span class="service-price">$250.00</span>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+  <section class="cta">
+    <div class="cta-inner">
+      <h2>Ready to Schedule Service?</h2>
+      <p>Get a free quote for your vacation rental HVAC needs. Fast response, transparent pricing, and professional service guaranteed.</p>
+      <a href="quote.html" class="btn-large">Get a Free Quote</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2026 DayOff AC & Heating Solutions. All rights reserved.</p>
+    <p style="margin-top:8px;">Serving Orlando, Kissimmee, Davenport & Champions Gate</p>
+  </footer>
+
+  <!-- Load header navigation -->
+  <script>
+    fetch('header.html').then(r=>r.text()).then(html=>{
+      document.getElementById('header-placeholder').innerHTML=html;
+      const hamburger = document.getElementById('hamburger');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (hamburger && mobileMenu) {
+        hamburger.addEventListener('click', () => {
+          hamburger.classList.toggle('open');
+          mobileMenu.classList.toggle('open');
+        });
+        mobileMenu.querySelectorAll('a').forEach(link => {
+          link.addEventListener('click', () => {
+            hamburger.classList.remove('open');
+            mobileMenu.classList.remove('open');
+          });
+        });
+      }
+    });
+  </script>
+</body>
+</html>
